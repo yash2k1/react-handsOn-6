@@ -1,0 +1,100 @@
+.formData{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    width: 90%;
+    height: 60vh;
+    margin: auto;
+    /* gap: 40px; */
+    /* margin-top: 50px; */
+    column-gap: 20px;
+    align-items: center;
+}
+.fields{
+    position: relative;
+    max-width: 450px;
+    height: 50px;
+}
+ label{
+    position: absolute;
+    top:50%;
+    left:20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+  z-index: 45;
+
+}
+input[type='number'],
+input[type='text'] {
+    height: 50px;
+    width: 100%;
+}
+input[type='number']:empty ,
+input[type='text']:empty {
+   background: transparent;
+   border: 2px solid gray;
+
+}
+
+input[type='number']:valid,
+input[type='number']:focus,
+input[type='text']:valid,
+input[type='text']:focus{
+   /* background-color: blue; */
+   background-color: rgb(255, 255, 255);
+   border:5px solid blue;
+   padding: 0;
+}
+input[type='number']:valid~label,
+input[type='number']:focus~label,
+input[type='text']:valid~label,
+input[type='text']:focus~label{
+  position: absolute;
+  top:0%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  /* background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1)); */
+  background: white;
+  width: 60px;
+  margin-top: 2px;
+  height: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 45;
+}
+
+
+
+.formBtns{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #13ccd6;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-right: 20px;
+    height: 50px;
+}
+.btn:hover{
+cursor: pointer;
+}
+@media (max-width:500px){
+    .formData{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,25%) ;
+        width: 90%;
+        height: 60vh;
+        margin: auto;
+        align-items: center;
+    } 
+  
+}
